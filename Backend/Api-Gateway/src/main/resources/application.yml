@@ -1,0 +1,33 @@
+server:
+ port: 9200
+
+
+
+spring:
+ cloud:
+  gateway:
+   routes:
+#Route Mapping
+   - id: user-service #RouteIdentifier
+     uri: http://localhost:8090/ #Respective microservice URL which needs to be mapped
+#Request Context Path Mapping
+     predicates:
+     - Path=/api/user/**
+
+#train details
+   - id: traindetails
+     uri: http://localhost:8091/
+     predicates:
+     - Path=/api/traindetails/**
+     
+#passenger
+   - id: passenger
+     uri: http://localhost:8095/
+     predicates:
+     - Path=/api/getAllTickets/**
+
+
+
+
+ application:
+  name: Eureka-with-api-gateway
