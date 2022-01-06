@@ -1,0 +1,46 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Add Train</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>id</label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="train.trainId" name="trainId">
+        </div>
+        <div class="form-group">
+            <label>name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="train.trainName" name="trainName">
+        </div>
+        <div class="form-group">
+            <label>source</label>
+            <input type="text" class="form-control" id="source" [(ngModel)]="train.source" name="source">
+        </div>
+        <div class="form-group">
+            <label>destination</label>
+            <input type="text" class="form-control" id="destination" [(ngModel)]="train.destination" name="destination">
+        </div>
+        <div class="form-group">
+            <label>departureTime</label>
+            <input type="text" class="form-control" id="departureTime" [(ngModel)]="train.departureTime" name="departureTime">
+        </div>
+        <div class="form-group">
+            <label>arrivalTime</label>
+            <input type="text" class="form-control" id="arrivalTime" [(ngModel)]="train.arrivalTime" name="arrivalTime">
+        </div>
+        <div class="form-group">
+            <label>duration</label>
+            <input type="text" class="form-control" id="duration" [(ngModel)]="train.duration" name="duration">
+        </div>
+        <div class="form-group">
+            <label>date</label>
+            <input type="date" class="form-control" id="date" [(ngModel)]="train.date" name="date">
+        </div>
+        <div class="form-group">
+            <label>seatsLeft</label>
+            <input type="text" class="form-control" id="seatsLeft" [(ngModel)]="train.seatsLeft" name="seatsLeft">
+        </div>
+        <div class="form-group">
+            <label>Fare</label>
+            <input type="text" class="form-control" id="Fare" [(ngModel)]="train.Fare" name="Fare">
+        </div>
+        <button class="btn btn-success" type="submit">submit</button>
+    </form>
+    </div>

@@ -1,0 +1,61 @@
+<mat-toolbar color="white" class="mat-elevation-z8">
+
+    <h1>Railway Reservation System</h1>
+  
+  
+  
+    <div class="space"></div>
+  
+       <a mat-button routerLink="/home" routerLinkActive="router-link-active" >Home</a>
+  
+       <a mat-button routerLink="/adminlogin" routerLinkActive="router-link-active" >Log Out</a>
+  
+  
+       
+  
+  </mat-toolbar>
+<h2>Train List</h2>
+<a href="Add-train">Add Train</a>
+<input class="form-control" type="text" name="source" [(ngModel)]="source" (ngModelChange)="Search()" placeholder="Source">
+<input class="form-control" type="text" name="destination" [(ngModel)]="destination" (ngModelChange)="SearchDestination()" placeholder="Destination">
+<!-- <input class="form-control" type="text" name="trainId" [(ngModel)]="trainId" (ngModelChange)="SearchById()" placeholder="trainId"> -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>trainId</th>
+            <th>trainName</th>
+            <th>source</th>
+            <th>destination</th>
+            <th>departureTime</th>
+            <th>arrivalTime</th>
+            <th>duration</th>
+            <th>date</th>
+            <th>seatsLeft</th>
+            <th>fare</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let train of train">
+            <td>{{train.trainId}}</td>
+            <td>{{train.trainName}}</td>
+            <td>{{train.source}}</td>
+            <td>{{train.destination}}</td>
+            <td>{{train.departureTime}}</td>
+            <td>{{train.arrivalTime}}</td>
+            <td>{{train.duration}}</td>
+            <td>{{train.date}}</td>
+            <td>{{train.seatsLeft}}</td>
+            <td>{{train.fare}}</td>
+            <td>
+                <!-- <a href="update-train">update</a> -->
+                <button (click)="updateTrain(train.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteTrain(train.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+            </td>
+            <!-- <td>
+                <button (click)="search(train.source)" class="btn btn-info">Book</button>
+            </td> -->
+
+        </tr>
+    </tbody>
+</table>

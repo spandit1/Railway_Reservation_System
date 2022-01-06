@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<mat-toolbar color="white" class="mat-elevation-z8">
+
+		<h1>Railway Reservation System</h1>
+	  
+	  
+	  
+		<div class="space"></div>
+	  
+		   <a mat-button routerLink="/home" routerLinkActive="router-link-active" >Home</a>
+	  
+		   <!-- <a mat-button routerLink="/train" routerLinkActive="router-link-active" >Search</a> -->
+	  
+	  
+		   <div class="dropdown">
+	  
+			<button class="dropbtn">Log In</button>
+	  
+			<div class="dropdown-content">
+	  
+			  <a routerLink="/adminlogin" routerLinkActive="router-link-active">Admin</a>
+	  
+			  <a routerLink="/login" routerLinkActive="router-link-active">User</a>
+	
+	  
+			</div>
+	  
+		  </div>
+	  
+	  </mat-toolbar>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Booking for Railway-Reservation-System</title>
+
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1 style="color:rgb(255, 255, 255);">Book Your Train</h1>
+						</div>
+						<form>
+							
+							<div class="form-group">
+                                <span class="form-label">Source</span>
+								<input class="form-control" type="text" style="width: 548px;">
+								
+							</div>
+							<div class="form-group">
+                                <span class="form-label">Destination</span>
+								<input class="form-control" type="text" style="width: 548px;">
+								
+							</div>
+							<br>
+							<p>OR</p>
+							<div class="form-group">
+                                <span class="form-label">Train Id</span>
+								<input class="form-control" type="text" style="width: 548px;">
+								
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+                                        <span class="form-label">Date</span>
+										<input class="form-control" type="date">
+										
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+                                        <span class="form-label">Travel class</span>
+										<select class="form-control">
+											<option>Sleeper</option>
+											<option>AC 3A</option>
+											<option>AC 2A</option>
+											<option>AC 1A</option>
+										</select>
+										<span class="select-arrow"></span>
+										
+									</div>
+								</div>
+							</div>
+                            <br>
+							<div >
+								<button mat-raised-button style="background: rgb(0, 248, 74); font-size: larger;">Check Availability</button>
+								<!-- <button><a class="submit-btn" href="train" >Check Availability</a></button> -->
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
